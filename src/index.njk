@@ -3,63 +3,30 @@ layout: base
 title: Home
 ---
 
-<section class="hero bg-primary text-white py-5">
+<section class="hero">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h1 class="display-4 fw-bold">Hello, I'm [Your Name]</h1>
-                <p class="lead">A passionate web developer creating beautiful and functional websites.</p>
-                <a href="/contact" class="btn btn-light btn-lg">Get in Touch</a>
-            </div>
-            <div class="col-lg-6">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-                     alt="Developer workspace" 
-                     class="img-fluid rounded shadow">
-            </div>
-        </div>
+        <h1 class="display-4">Welcome to My Portfolio</h1>
+        <p class="lead">Full-stack developer crafting beautiful web experiences</p>
+        <a href="/projects" class="btn btn-primary btn-lg mt-3">View My Work</a>
     </div>
 </section>
 
-<section class="featured-projects py-5">
+<section class="py-5">
     <div class="container">
         <h2 class="text-center mb-5">Featured Projects</h2>
         <div class="row g-4">
+            {% for i in range(0, 3) %}
             <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" 
-                         class="card-img-top" 
-                         alt="Project 1">
+                <div class="card project-card h-100">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Project">
                     <div class="card-body">
-                        <h5 class="card-title">Project One</h5>
-                        <p class="card-text">A brief description of the first project and its key features.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
+                        <h5 class="card-title">Project {{ i + 1 }}</h5>
+                        <p class="card-text">A brief description of the project and the technologies used.</p>
+                        <a href="/projects" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40" 
-                         class="card-img-top" 
-                         alt="Project 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Project Two</h5>
-                        <p class="card-text">Description of the second project highlighting its unique aspects.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d" 
-                         class="card-img-top" 
-                         alt="Project 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Project Three</h5>
-                        <p class="card-text">Overview of the third project and its main achievements.</p>
-                        <a href="#" class="btn btn-primary">Learn More</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

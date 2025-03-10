@@ -1,23 +1,67 @@
+// Import Bootstrap functions and variables first
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// Custom variables
+$primary: #0d6efd;
+$secondary: #6c757d;
+$success: #198754;
+$info: #0dcaf0;
+$warning: #ffc107;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #212529;
+
+// Create the map including the variables you want to override
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
 // Import Bootstrap
-@import "bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
 
 // Custom styles
 .hero {
-    background: linear-gradient(135deg, #0d6efd 0%, #0dcaf0 100%);
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&w=2000&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 0;
+    color: white;
+    text-align: center;
 }
 
-.card {
+// Project cards
+.project-card {
     transition: transform 0.3s ease;
     &:hover {
         transform: translateY(-5px);
     }
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }
 }
 
+// Additional custom styles
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 
-// Add more custom styles as needed
+.btn {
+    padding: 0.5rem 1.5rem;
+    &.btn-lg {
+        padding: 0.75rem 2rem;
+    }
+}
+
+.footer {
+    box-shadow: 0 -2px 4px rgba(0,0,0,.05);
+}
