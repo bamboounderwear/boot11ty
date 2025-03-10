@@ -1,0 +1,19 @@
+{
+  "name": "eleventy-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website built with 11ty and Bootstrap 5",
+  "type": "module",
+  "scripts": {
+    "start": "npm run sass && eleventy --serve",
+    "build": "npm run sass && eleventy",
+    "clean": "rm -rf _site",
+    "sass": "sass --load-path=node_modules src/scss:_site/assets/css --style=compressed"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0-alpha.5",
+    "sass": "^1.71.1"
+  }
+}
