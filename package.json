@@ -4,6 +4,7 @@
   "description": "Portfolio website built with 11ty and Bootstrap 5",
   "scripts": {
     "start": "npm-run-all clean -p watch:*",
+    "dev": "npm run start",
     "build": "npm-run-all clean -p build:*",
     "watch:sass": "sass --watch src/scss:_site/css",
     "watch:eleventy": "eleventy --serve",

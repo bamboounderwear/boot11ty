@@ -1,0 +1,52 @@
+// Simple custom utility classes
+
+// Custom colors
+.text-brand-blue { color: #1e3d59; }
+.text-brand-gold { color: #f5b301; }
+.text-brand-light { color: #f7f7f7; }
+.text-brand-dark { color: #2b2b2b; }
+
+.bg-brand-blue { background-color: #1e3d59; }
+.bg-brand-gold { background-color: #f5b301; }
+.bg-brand-light { background-color: #f7f7f7; }
+.bg-brand-dark { background-color: #2b2b2b; }
+
+// Cursor utilities
+.cursor-pointer { cursor: pointer; }
+.cursor-default { cursor: default; }
+.cursor-move { cursor: move; }
+.cursor-grab { cursor: grab; }
+
+// Opacity utilities
+.opacity-0 { opacity: 0; }
+.opacity-25 { opacity: 0.25; }
+.opacity-50 { opacity: 0.5; }
+.opacity-75 { opacity: 0.75; }
+.opacity-100 { opacity: 1; }
+
+// Gradient backgrounds
+.bg-gradient-primary {
+  background-image: linear-gradient(45deg, var(--bs-primary), var(--bs-primary-light, #6ea8fe));
+}
+
+.bg-gradient-brand {
+  background-image: linear-gradient(45deg, #1e3d59, #f5b301);
+}
+
+// Text shadow
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+// Hover lift effect
+.hover-lift {
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Background pattern
+.bg-pattern {
+  background-image: url("https://idealquilting.com/wp-content/uploads/2019/02/chevron.png");
+}
